@@ -6,5 +6,21 @@
             "id": "repl_node",
             "file": "config/NodeJS/Main.sublime-menu"
         }
+    },
+    {
+        "caption": "SublimeREPL: Node current",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_node_run_current",
+            "file": "config/NodeJS/Main.sublime-menu"
+        }
+    },
+    {
+        "caption": "SublimeREPL: Node debug current",
+        "command": "run_existing_window_command", "args":
+        {
+            "id": "repl_node_debug_current",
+            "file": "config/NodeJS/Main.sublime-menu"
+        }
     }
 ]

@@ -1,31 +1,77 @@
 [
-     {
+    {
         "id": "tools",
         "children":
-        [{
-            "caption": "SublimeREPL",
-            "mnemonic": "R",
-            "id": "SublimeREPL",
-            "children":
-            [
-                {"command": "repl_open",
-                 "caption": "Node",
-                 "id": "repl_node",
-                 "mnemonic": "N",
-                 "args": {
-                    "type": "subprocess",
-                    "encoding": "utf8",
-                    "cmd": {"linux": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
-                            "osx": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
-                            "windows": ["node.exe", "${packages}/SublimeREPL/config/NodeJS/repl.js"]},
-                    "cwd": "$file_path",
-                    "syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-                    "external_id": "js",
-                    "autocomplete_server": true,
-                    "extend_env": {"NODE_NO_READLINE": 1}
-                    }
-                }
-            ]
-        }]
+        [
+            {
+
+                "caption": "SublimeREPL",
+                "mnemonic": "R",
+                "id": "SublimeREPL",
+                "children":
+                            [
+                                {
+                                    "caption": "Nodejs",
+                                    "id": "Nodejs",
+                                    "children": 
+                                    [
+                                        {"command": "repl_open",
+                                         "caption": "Node",
+                                         "id": "repl_node",
+                                         "mnemonic": "N",
+                                         "args": {
+                                            "type": "subprocess",
+                                            "encoding": "utf8",
+                                            "cmd": {"linux": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
+                                                    "osx": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
+                                                    "windows": ["node.exe", "${packages}/SublimeREPL/config/NodeJS/repl.js"]},
+                                            "cwd": "$file_path",
+                                            "syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+                                            "external_id": "js",
+                                            "autocomplete_server": true,
+                                            "extend_env": {"NODE_NO_READLINE": 1}
+                                            }
+                                        },
+                                        {
+                                            "command": "repl_open",
+                                            "caption": "Node Current File",
+                                            "id": "repl_node_run_current",
+                                            "mnemonic": "N",
+                                            "args": {
+                                            "type": "subprocess",
+                                            "encoding": "utf8",
+                                            "cmd": {"linux": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
+                                                    "osx": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
+                                                    "windows": ["node.exe", "$file_basename"]},
+                                            "cwd": "$file_path",
+                                            "syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+                                            "external_id": "js",
+                                            "autocomplete_server": true,
+                                            "extend_env": {"NODE_NO_READLINE": 1}
+                                            }
+                                        },
+                                        {
+                                            "command": "repl_open",
+                                            "caption": "Node debug Current File",
+                                            "id": "repl_node_debug_current",
+                                            "mnemonic": "N",
+                                            "args": {
+                                            "type": "subprocess",
+                                            "encoding": "utf8",
+                                            "cmd": {"linux": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
+                                                    "osx": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
+                                                    "windows": ["node.exe", "debug", "$file_basename"]},
+                                            "cwd": "$file_path",
+                                            "syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+                                            "external_id": "js",
+                                            "autocomplete_server": true,
+                                            "extend_env": {"NODE_NO_READLINE": 1}
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+            }
+        ]
     }
 ]
