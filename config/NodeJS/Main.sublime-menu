@@ -40,8 +40,8 @@
                                             "args": {
                                             "type": "subprocess",
                                             "encoding": "utf8",
-                                            "cmd": {"linux": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
-                                                    "osx": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
+                                            "cmd": {"linux": ["node", "$file_basename"],
+                                                    "osx": ["node", "$file_basename"],
                                                     "windows": ["node.exe", "$file_basename"]},
                                             "cwd": "$file_path",
                                             "syntax": "Packages/JavaScript/JavaScript.tmLanguage",
@@ -58,8 +58,8 @@
                                             "args": {
                                             "type": "subprocess",
                                             "encoding": "utf8",
-                                            "cmd": {"linux": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
-                                                    "osx": ["node", "${packages}/SublimeREPL/config/NodeJS/repl.js"],
+                                            "cmd": {"linux": ["node", "debug", "$file_basename"],
+                                                    "osx": ["node", "debug", "$file_basename"],
                                                     "windows": ["node.exe", "debug", "$file_basename"]},
                                             "cwd": "$file_path",
                                             "syntax": "Packages/JavaScript/JavaScript.tmLanguage",
